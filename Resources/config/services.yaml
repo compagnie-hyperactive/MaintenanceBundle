@@ -1,0 +1,8 @@
+parameters:
+  lch.maintenance.request.subscriber.class: Lch\MaintenanceBundle\EventListener\RequestSubscriber
+
+services:
+  lch.maintenance.request.subscriber:
+    class: '%lch.maintenance.request.subscriber.class%'
+    tags:
+      - { name: kernel.event_subscriber }

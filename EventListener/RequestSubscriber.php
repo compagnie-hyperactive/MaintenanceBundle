@@ -8,6 +8,8 @@
 namespace Lch\MaintenanceBundle\EventListener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 
 /**
  * Class RequestSubscriber
