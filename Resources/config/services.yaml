@@ -1,8 +1,15 @@
 parameters:
   lch.maintenance.request.subscriber.class: Lch\MaintenanceBundle\EventListener\RequestSubscriber
+  lch.maintenance.toggle_maintenance_command.class: Lch\MaintenanceBundle\Command\ToggleMaintenanceCommand
 
 services:
   lch.maintenance.request.subscriber:
     class: '%lch.maintenance.request.subscriber.class%'
     tags:
       - { name: kernel.event_subscriber }
+
+  lch.maintenance.toggle_maintenance_command:
+    class: '%lch.maintenance.toggle_maintenance_command.class%'
+    arguments: ['%kernel.project_dir%']
+    tags:
+      - { name: console.command }
