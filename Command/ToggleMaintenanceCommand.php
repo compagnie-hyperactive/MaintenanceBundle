@@ -22,9 +22,7 @@ class ToggleMaintenanceCommand extends Command
     public const MAINTENANCE_OFF = 0;
     public const FILE_NAME = '.maintenance';
 
-    /**
-     * @var string
-     */
+    /** @var string */
     protected $projectDir;
 
 

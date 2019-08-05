@@ -5,6 +5,7 @@ parameters:
 services:
   lch.maintenance.request.subscriber:
     class: '%lch.maintenance.request.subscriber.class%'
+    arguments: ['%kernel.project_dir%', '@file_locator']
     tags:
       - { name: kernel.event_subscriber }
 
