@@ -1,0 +1,26 @@
+{
+    "name": "lch/maintenance-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony LchMaintenanceBundle",
+    "keywords": ["maintenance","system"],
+    "homepage": "https://github.com/compagnie-hyperactive/MaintenanceBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas BONNIOT",
+            "email": "nbonniot@compagnie-hyperactive.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "symfony/framework-bundle": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lch\\MaintenanceBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    }
+}
