@@ -18,9 +18,14 @@ use Symfony\Component\Filesystem\Filesystem;
 class ToggleMaintenanceCommand extends Command
 {
 
+
     public const MAINTENANCE_ON = 1;
     public const MAINTENANCE_OFF = 0;
     public const FILE_NAME = '.maintenance';
+    public const MAINTENANCE_PARAMETER = 'maintenanceModeValue';
+
+    /** @var string  */
+    public static $defaultName = 'lch:maintenance:toggle';
 
     /** @var string */
     protected $projectDir;
@@ -43,10 +48,9 @@ class ToggleMaintenanceCommand extends Command
     protected function configure(): void
     {
         $this
-            ->setName('lch:maintenance:toggle')
             ->setDescription('Toggle maintenance mode')
             ->addArgument(
-                "maintenanceModeValue",
+                static::MAINTENANCE_PARAMETER,
                 InputArgument::REQUIRED,
                 "The value to toggle maintenance mode to : 1 or 0",
                 null
