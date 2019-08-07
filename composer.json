@@ -15,7 +15,7 @@
         "php": "^7.2",
         "symfony/framework-bundle": "^4.2",
         "symfony/filesystem": "^4.2",
-        "symfony/console": "^4.3"
+        "symfony/console": "^4.2"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.3"
