@@ -1,4 +1,6 @@
 # MaintenanceBundle
+[![Build Status](https://travis-ci.org/compagnie-hyperactive/MaintenanceBundle.svg?branch=master)](https://travis-ci.org/compagnie-hyperactive/MaintenanceBundle)
+
 Provides helper to set web app in maintenance mode. This is useful when using automated deploying processes, ensuring website is properly inaccessible during the deploy process.
 
 This bundle provides a flat html fil for maintenance splash screen. This is done __to avoid generating cache during the maintenance time__.
