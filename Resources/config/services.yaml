@@ -8,9 +8,21 @@ services:
     arguments: ['%kernel.project_dir%', '@file_locator']
     tags:
       - { name: kernel.event_subscriber }
+    public: false
+    lazy: true
 
   lch.maintenance.toggle_maintenance_command:
     class: '%lch.maintenance.toggle_maintenance_command.class%'
     arguments: ['%kernel.project_dir%']
     tags:
       - { name: console.command }
+    public: false
+    lazy: true
+
+  # Aliases for allowing autowire
+  Lch\MaintenanceBundle\EventListener\RequestSubscriber:
+    alias: lch.maintenance.request.subscriber
+
+
+  Lch\MaintenanceBundle\Command\ToggleMaintenanceCommand:
+    alias: lch.maintenance.toggle_maintenance_command
