@@ -18,20 +18,15 @@
         "symfony/console": "^4.2"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^4.3",
-        "symfony/browser-kit": "^4.2"
+        "symfony/phpunit-bridge": "^4.3"
     },
     "autoload": {
         "psr-4": {
-            "Lch\\MaintenanceBundle\\": ""
+            "Lch\\MaintenanceBundle\\": "",
+            "Lch\\MaintenanceBundle\\Tests\\": "Tests/"
         },
         "exclude-from-classmap": [
             "/Tests/"
         ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Lch\\MaintenanceBundle\\Tests\\": "Tests/"
-        }
     }
 }
