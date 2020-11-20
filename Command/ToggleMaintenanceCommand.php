@@ -114,7 +114,7 @@ class ToggleMaintenanceCommand extends Command
 
                 break;
             case static::MAINTENANCE_OFF:
-                $maintenanceRules   = "\r\nRewriteCond %{REQUEST_URI} " . pathinfo($maintenanceHtmlFilePath, PATHINFO_BASENAME) . "$ [NC]\r\nRewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]\r\nRewriteRule $ / [R=301,L]\r\n";
+                $maintenanceRules   = "\r\nRewriteCond %{REQUEST_URI} " . pathinfo($maintenanceHtmlFilePath, PATHINFO_BASENAME) . "$ [NC]\r\nRewriteRule $ / [R=301,L]\r\n";
                 $output->writeln("Maintenance rules removed from .htaccess");
                 break;
         }
