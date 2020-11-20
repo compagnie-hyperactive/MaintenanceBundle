@@ -106,7 +106,7 @@ class ToggleMaintenanceCommand extends Command
 
         switch ($maintenanceModeValue) {
             case static::MAINTENANCE_ON:
-                $maintenanceRules   = "\r\nRewriteCond %{REQUEST_URI} !/" . pathinfo($maintenanceHtmlFilePath, PATHINFO_BASENAME) . "$ [NC]\r\nRewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]\r\nRewriteRule $ /maintenance.html [R=302,L]\r\n";
+                $maintenanceRules   = "\r\nRewriteCond %{REQUEST_URI} !/" . pathinfo($maintenanceHtmlFilePath, PATHINFO_BASENAME) . "$ [NC]\r\nRewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif|svg|css) [NC]\r\nRewriteRule $ /maintenance.html [R=302,L]\r\n";
                 copy($maintenanceHtmlFilePath, $this->projectDir . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR . pathinfo($maintenanceHtmlFilePath, PATHINFO_BASENAME));
                 $output->writeln("Maintenance file copied to public/");
 
